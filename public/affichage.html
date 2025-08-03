@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Afficher Positions</title>
+    <title>Maintenance | Affichage des Positions</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,163 +23,85 @@
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
-        padding: 20px;
+        padding: 0;
         background-color: #f5f7fa;
         color: var(--dark-color);
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         text-align: center;
-        margin-bottom: 30px;
-        color: var(--secondary-color);
-        font-weight: 600;
+        padding: 2rem;
       }
 
-      .table-container {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        margin-bottom: 30px;
-      }
-
-      table {
+      .maintenance-box {
+        background: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
         width: 100%;
-        border-collapse: collapse;
       }
 
-      thead {
+      .maintenance-box .icon {
+        font-size: 3rem;
+        color: var(--info-color);
+        margin-bottom: 1rem;
+      }
+
+      .maintenance-box h1 {
+        font-size: 2.2rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+
+      .maintenance-box p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+
+      .contact-link {
+        display: inline-block;
         background-color: var(--primary-color);
         color: white;
-      }
-
-      th {
-        padding: 15px;
-        text-align: left;
-        font-weight: 500;
-      }
-
-      tbody tr {
-        border-bottom: 1px solid #e0e0e0;
-        transition: background-color 0.2s;
-      }
-
-      tbody tr:hover {
-        background-color: #f8f9fa;
-      }
-
-      td {
-        padding: 12px 15px;
-        vertical-align: top;
-      }
-
-      .user-id {
-        font-family: "Courier New", Courier, monospace;
-        font-size: 0.9em;
-        color: #6c757d;
-      }
-
-      .position-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 0;
-        border-bottom: 1px dashed #e0e0e0;
-      }
-
-      .position-item:last-child {
-        border-bottom: none;
-      }
-
-      .coordinates {
-        font-family: "Courier New", Courier, monospace;
-        margin-right: 10px;
-      }
-
-      .btn-group {
-        display: flex;
-        gap: 8px;
-      }
-
-      .btn {
-        padding: 6px 12px;
-        border-radius: 4px;
-        font-size: 0.85em;
-        cursor: pointer;
-        border: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        transition: all 0.2s;
+        padding: 0.8rem 2rem;
         text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
       }
 
-      .btn-info {
-        background-color: var(--info-color);
-        color: white;
+      .contact-link:hover {
+        background-color: var(--secondary-color);
+        box-shadow: 0 6px 18px rgba(63, 55, 201, 0.4);
       }
 
-      .btn-info:hover {
-        background-color: #138496;
-      }
-
-      .btn-success {
-        background-color: var(--success-color);
-        color: white;
-      }
-
-      .btn-success:hover {
-        background-color: #3a9e32;
-      }
-
-      .loading {
-        text-align: center;
-        padding: 40px;
-        color: #6c757d;
-        font-size: 1.1em;
-      }
-
-      .error {
-        color: var(--danger-color);
-        text-align: center;
-        padding: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .table-container {
-          overflow-x: auto;
+      @media (max-width: 600px) {
+        .maintenance-box h1 {
+          font-size: 1.8rem;
         }
 
-        table {
-          min-width: 600px;
-        }
-
-        .btn-group {
-          flex-direction: column;
-          gap: 5px;
-        }
-
-        .btn {
-          width: 100%;
-          justify-content: center;
+        .contact-link {
+          padding: 0.7rem 1.5rem;
+          font-size: 0.95rem;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Positions des utilisateurs</h1>
-      <div class="table-container">
-        <div id="positions" class="loading">
-          <i class="fas fa-spinner fa-spin"></i> Chargement des positions...
-        </div>
-      </div>
+    <div class="maintenance-box">
+      <div class="icon"><i class="fas fa-tools"></i></div>
+      <h1>Maintenance en cours</h1>
+      <p>
+        Cette page d’affichage est temporairement indisponible pour cause de
+        maintenance.<br />
+        Merci de revenir plus tard ou de contacter le fournisseur.
+      </p>
+      <a href="mailto:contact@fournisseur.com" class="contact-link">
+        Contacter le fournisseur
+      </a>
     </div>
-    <script src="affichage.js"></script>
   </body>
 </html>

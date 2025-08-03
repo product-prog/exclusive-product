@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Produit Exceptionnel | Obtenez-le Maintenant</title>
+    <title>Site en Maintenance | Mon Produit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,291 +28,84 @@
 
       body {
         font-family: "Roboto", sans-serif;
-        line-height: 1.6;
         color: var(--dark);
         background-color: #f5f7ff;
-        padding: 0;
-        margin: 0;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      header {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         text-align: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+
+      .maintenance-container {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
       }
 
       h1 {
         font-family: "Montserrat", sans-serif;
         font-size: 2.5rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-      }
-
-      h2 {
-        font-family: "Montserrat", sans-serif;
         color: var(--secondary);
-        margin-bottom: 1.5rem;
-        font-size: 2rem;
+        margin-bottom: 1rem;
       }
 
-      .hero {
-        text-align: center;
-        padding: 4rem 0;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 0 auto 2rem;
+      p {
+        font-size: 1.1rem;
         color: #555;
+        margin-bottom: 2rem;
       }
 
-      .product-showcase {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 3rem;
-        padding: 3rem 0;
-        align-items: center;
-      }
-
-      .product-image {
-        flex: 1;
-        min-width: 300px;
-        max-width: 500px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .product-image:hover {
-        transform: translateY(-5px);
-      }
-
-      .product-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .product-details {
-        flex: 1;
-        min-width: 300px;
-        max-width: 500px;
-      }
-
-      .features {
-        margin: 1.5rem 0;
-      }
-
-      .features li {
-        margin-bottom: 0.8rem;
-        list-style-type: none;
-        position: relative;
-        padding-left: 30px;
-      }
-
-      .features li:before {
-        content: "✓";
-        color: var(--success);
-        position: absolute;
-        left: 0;
-        font-weight: bold;
-      }
-
-      .cta-section {
-        text-align: center;
-        padding: 3rem 0;
-        background: linear-gradient(135deg, #f5f7ff, #e6ebff);
-        margin: 2rem 0;
-        border-radius: 10px;
-      }
-
-      .cta-button {
+      .contact-button {
         display: inline-block;
         background: linear-gradient(135deg, var(--primary), var(--accent));
         color: white;
-        padding: 1rem 2.5rem;
-        font-size: 1.2rem;
-        border: none;
+        padding: 0.9rem 2rem;
         border-radius: 50px;
-        cursor: pointer;
-        text-decoration: none;
         font-weight: 600;
-        box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+        text-decoration: none;
+        font-size: 1rem;
+        box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
         transition: all 0.3s ease;
-        transform: translateY(0);
-        margin-top: 1rem;
       }
 
-      .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(67, 97, 238, 0.6);
-        background: linear-gradient(135deg, var(--accent), var(--primary));
+      .contact-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(67, 97, 238, 0.5);
       }
 
-      .cta-button:active {
-        transform: translateY(1px);
-      }
-
-      .testimonials {
-        padding: 3rem 0;
-        text-align: center;
-      }
-
-      .testimonial-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .testimonial-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        max-width: 350px;
-        text-align: left;
-        transition: transform 0.3s ease;
-      }
-
-      .testimonial-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .testimonial-card p {
-        font-style: italic;
+      .icon {
+        font-size: 3rem;
         margin-bottom: 1rem;
+        color: var(--success);
       }
 
-      .testimonial-author {
-        font-weight: bold;
-        color: var(--primary);
-      }
-
-      footer {
-        background-color: var(--dark);
-        color: white;
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 3rem;
-      }
-
-      @media (max-width: 768px) {
+      @media (max-width: 600px) {
         h1 {
           font-size: 2rem;
         }
 
-        h2 {
-          font-size: 1.5rem;
-        }
-
-        .product-showcase {
-          flex-direction: column;
+        .contact-button {
+          padding: 0.8rem 1.5rem;
+          font-size: 0.95rem;
         }
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Découvrez Notre Produit Révolutionnaire</h1>
-        <p>La solution tout-en-un pour transformer votre quotidien</p>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="hero">
-        <h2>Obtenez dès maintenant votre exemplaire</h2>
-        <p>
-          Notre produit innovant a déjà changé la vie de milliers de personnes.
-          Ne manquez pas cette opportunité de rejoindre notre communauté
-          satisfaite.
-        </p>
-      </section>
-
-      <section class="product-showcase">
-        <div class="product-image">
-          <!-- Remplacez par votre image de produit -->
-          <img
-            src="https://via.placeholder.com/500x300?text=Image+du+Produit"
-            alt="Notre produit révolutionnaire"
-          />
-        </div>
-
-        <div class="product-details">
-          <h2>Caractéristiques Principales</h2>
-          <ul class="features">
-            <li>Fonctionnalité exceptionnelle qui change tout</li>
-            <li>Design élégant et ergonomique</li>
-            <li>Facile à utiliser dès la première utilisation</li>
-            <li>Résultats garantis en moins de 7 jours</li>
-            <li>Support client disponible 24/7</li>
-          </ul>
-
-          <p>
-            Notre produit a été conçu avec soin pour répondre à vos besoins les
-            plus exigeants. La qualité est notre priorité absolue.
-          </p>
-        </div>
-      </section>
-
-      <section class="cta-section">
-        <h2>Prêt à essayer ?</h2>
-        <p>
-          Cliquez sur le bouton ci-dessous pour obtenir votre exemplaire
-          immédiatement
-        </p>
-        <button class="cta-button" onclick="obtenirPosition()">
-          OBTENIR MON PRODUIT
-        </button>
-      </section>
-
-      <section class="testimonials">
-        <h2>Ce que nos clients disent</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <p>
-              "Ce produit a complètement changé ma façon de travailler. Je ne
-              pourrais plus m'en passer maintenant !"
-            </p>
-            <div class="testimonial-author">- Marie D.</div>
-          </div>
-          <div class="testimonial-card">
-            <p>
-              "Simple d'utilisation et extrêmement efficace. J'ai été
-              impressionné par les résultats dès la première semaine."
-            </p>
-            <div class="testimonial-author">- Thomas L.</div>
-          </div>
-          <div class="testimonial-card">
-            <p>
-              "Le meilleur achat que j'ai fait cette année. Le rapport
-              qualité-prix est exceptionnel."
-            </p>
-            <div class="testimonial-author">- Sophie M.</div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2023 Mon Produit. Tous droits réservés.</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="maintenance-container">
+      <div class="icon">🛠️</div>
+      <h1>Site en Maintenance</h1>
+      <p>
+        Notre site est temporairement indisponible pour cause de maintenance.<br />
+        Nous faisons tout notre possible pour le rétablir au plus vite.
+      </p>
+      <a href="mailto:contact@fournisseur.com" class="contact-button">
+        Contacter le fournisseur
+      </a>
+    </div>
   </body>
 </html>
